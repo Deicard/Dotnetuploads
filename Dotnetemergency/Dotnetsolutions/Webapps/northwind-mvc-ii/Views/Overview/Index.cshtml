@@ -1,0 +1,66 @@
+@model northwind_app.ViewModels.Overview.CustomersViewModel
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form 
+            asp-controller="Overview" 
+            asp-action="SearchCustomers" 
+            method="Post">
+
+            <div class="form-group">
+                <input asp-for="SearchValue" class="form-control" />
+                <span asp-validation-for="SearchValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+<!-- only show history when available -->
+@if(Model.PreviousQueries.Count > 0){
+<div class="row">
+    <div class="col-md-4">
+    <h3>Query history (<a asp-controller="Overview" 
+                            asp-action="ClearSearch">
+                            clear
+                        </a>)
+    </h3>
+        <ul>
+            @foreach (var item in @Model.PreviousQueries)
+            {
+             <li>@item</li>   
+            }
+        </ul>
+    </div>
+</div>
+<hr />
+}
+
+<h1>@Model.TitlePage</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Model.TitleName</th>
+            <th>@Model.TitleCity</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Customers) {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.City</td>
+            <td>
+                <a  asp-controller="Overview" 
+                    asp-action="GetOrdersByCustomerId" 
+                    asp-route-customerId="@item.Id">
+                    Orders
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

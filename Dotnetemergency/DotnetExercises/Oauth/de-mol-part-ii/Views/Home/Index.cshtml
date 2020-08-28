@@ -1,0 +1,51 @@
+﻿@model ViewModels.HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_LayoutDeMol";
+}
+
+<div class="de-mol">
+    <h1>kandidaten</h1>
+    <div class="logo"></div>
+    <ul>
+    @foreach(var player in Model.Players){
+        <li class="player">
+            <div class="photo">
+                <img src="/images/@player.Photo"/>     
+                <div class="vote-total">@Model.Votes[player.Id].Percentage.ToString("0")%</div>   
+            </div>
+            <div class="info">
+                <h2>@player.Name</h2>  
+                <p>@player.Age, @player.Gender, @player.Profession</p>
+                    @if (@Model.CanVote && User.Identity.IsAuthenticated){
+                        <form asp-controller="Vote"  asp-action="Vote"  method="Post">
+                            <input name="playerId" value="@player.Id" class="form-control" type="hidden"/>
+                            <input name="episode" value="@Model.Episode" class="form-control" type="hidden"/>
+                            <input type="submit" value="stem voor @player.Name" class="btn btn-primary" />
+                        </form>
+                    }else if(! @Model.CanVote && User.Identity.IsAuthenticated){
+                        @if(@Model.YourVote == @player.Id) {
+                            <div class="voted">
+                                <span class="vote-yes">jouw stem!</span>
+                                @if(User.IsInRole("Admin")){
+                                    <form asp-controller="Vote"  asp-action="UnVote"  method="Post">
+                                        <input name="playerId" value="@player.Id" class="form-control" type="hidden"/>
+                                        <input name="episode" value="@Model.Episode" class="form-control" type="hidden"/>
+                                        <input type="submit" value="x" class="btn btn-primary un-vote" />
+                                    </form>
+                                }
+                            </div>
+                        }else{
+                            <span class="vote-no">niet gekozen!</span>
+                        }
+                    }else{
+                        <a href="/Identity/Account/Login">login in om te stemmen</a>
+                    }
+                
+            </div>
+            
+        </li>
+    }
+    </ul>
+</div>

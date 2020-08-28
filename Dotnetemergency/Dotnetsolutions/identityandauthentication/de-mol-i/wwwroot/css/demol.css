@@ -1,0 +1,121 @@
+
+body{
+    background: #000909;
+}
+
+ul {
+    list-style: none;
+}
+.my-container{
+    
+    height: 1200px;
+    margin-top: -1rem;
+}
+
+h1 {
+    text-align: center;
+}
+.de-mol{
+    height: 100%;
+    background: rgba(0,0,0, 0%);
+    /*rgba(0,0,0, 0%);*/
+    /*color: #143639;*/
+    color: #fff;
+    min-width: 1200px;
+}
+
+footer{
+    background: #fff;
+    /*background: #143639;*/
+}
+
+.my-container main{
+    height: 100%;
+    background-image: url(/images/logo.png);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
+
+    background-position: center center;
+}
+
+.de-mol ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.de-mol ul li{
+    width: 50%;
+    
+}
+
+.de-mol ul li:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.de-mol .player{
+    display: flex;
+}
+
+.de-mol .photo img{
+    width: 175px;
+}
+
+.de-mol .info {
+    padding: 60px 5px;
+}
+.de-mol .info h2{
+    font-size: 24px;
+}
+
+.de-mol .player .photo {
+    position: relative;
+}
+.de-mol .player .photo .vote-total {
+    position: absolute;
+    bottom: 46px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255,255,255,0.7);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #143639;
+    border-color: #143639;
+}
+
+.vote-yes{
+    color: #4D7E83;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.vote-no{
+    color: #444;
+}
+
+
+.voted{
+    display: flex;
+}
+
+.voted span{
+    padding: 4px;
+}
+.btn.btn-primary.un-vote, .btn.btn-primary.un-vote:hover{
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.btn.btn-primary.un-vote:hover{
+    background: red;
+    color:#fff;
+    
+
+}

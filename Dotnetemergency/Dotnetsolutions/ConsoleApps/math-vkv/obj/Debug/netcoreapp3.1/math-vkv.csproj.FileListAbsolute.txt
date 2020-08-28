@@ -1,0 +1,11 @@
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\obj\Debug\netcoreapp3.1\math-vkv.csprojAssemblyReference.cache
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\obj\Debug\netcoreapp3.1\math-vkv.AssemblyInfoInputs.cache
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\obj\Debug\netcoreapp3.1\math-vkv.AssemblyInfo.cs
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.exe
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.deps.json
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.runtimeconfig.json
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.runtimeconfig.dev.json
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.dll
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\bin\Debug\netcoreapp3.1\math-vkv.pdb
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\obj\Debug\netcoreapp3.1\math-vkv.dll
+C:\Users\dimitri.casier\Documents\Code\dotnet\password\math-vkv\obj\Debug\netcoreapp3.1\math-vkv.pdb

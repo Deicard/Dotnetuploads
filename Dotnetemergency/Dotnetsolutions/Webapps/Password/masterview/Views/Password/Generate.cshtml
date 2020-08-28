@@ -1,0 +1,31 @@
+@{
+    Layout = "_PasswordLayout";
+    ViewData["Title"] = "Generated Password";
+}
+
+@section Styles{
+<link rel="stylesheet" href="~/css/password_generated.css" />
+}
+
+<main id="password_generate">
+    <header>
+    <h1>Generated password</h1>
+    </header>
+
+    <section>
+    <ul>
+        @if(@Model.Status == "success"){
+            <li><label>algo:</label>@Model.Algo</li>
+            <li><label >password:</label><span class="generated_password">@Model.Password</span></li>
+        }else{
+            <li class="error">@Model.Message</li>
+        }
+    </ul>
+    </section>
+</main>
+
+
+@section footer{
+    <div>generated password - <span class="footerColor">@Model.Status</span></div>
+}
+

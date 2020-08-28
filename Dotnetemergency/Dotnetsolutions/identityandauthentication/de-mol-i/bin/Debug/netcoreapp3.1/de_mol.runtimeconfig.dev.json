@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/BigfishDim/.dotnet/store/|arch|/|tfm|",
+      "/Users/BigfishDim/.nuget/packages"
+    ]
+  }
+}

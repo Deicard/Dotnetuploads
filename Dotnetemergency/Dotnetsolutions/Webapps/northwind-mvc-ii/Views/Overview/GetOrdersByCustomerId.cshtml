@@ -1,0 +1,23 @@
+@model northwind_app.ViewModels.Overview.OrdersViewModel
+
+<h1>@Model.TitlePage</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Model.TitleOrderDate</th>
+            <th>@Model.TitleAddress</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Orders) {
+        <tr>
+            <td>@item.OrderDate</td>
+            <td>@item.Address</td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<a asp-action="CreateOrder" asp-route-customerId="@Model.CustomerId">Create order | </a>
+<a asp-action="Index">Back</a>

@@ -1,0 +1,22 @@
+@model masterView.ViewModels.Password.PasswordOverviewViewModel
+
+@{
+    Layout = "_PasswordLayout";
+}
+
+@section Styles{
+<link rel="stylesheet" href="~/css/password_overview.css" />
+}
+
+<main id="password_algorithms">
+    <h1>Algorithms</h1>
+    <ul class="algos">
+        @foreach (var item in Model.Algorithms) {
+            <li><a 
+                    asp-route="Password"
+                    asp-route-algo="@item"> @item
+                </a>
+            </li>
+        }
+    </ul>
+</main>
